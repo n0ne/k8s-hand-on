@@ -21,3 +21,19 @@ spec:
   # type: ClusterIP   # <- this pod will be accessible only inside cluster
                     # and not from outside. Protected in some way
   type: NodePort    # <- this pod will be accessible only from outside cluster
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: fleetman-queue
+
+spec:
+  selector:
+    app: queue
+  ports:
+    - name: http
+      port: 8161
+      nodePort: 30010 
+  type: NodePort

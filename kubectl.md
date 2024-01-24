@@ -10,3 +10,5 @@
 - `kubectl get pods` -
 - `kubectl get pods --show-labels` -
 - `kubectl get pods --show-labels -l release=0` - 
+- `kubectl port-forward svc/fleetman-queue 30010:8161` - 
+- 
