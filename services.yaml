@@ -10,7 +10,7 @@ spec:
   selector:
     app: webapp
     # mylabelname: webapp
-    release: "0-5"
+    # release: "0-5"
   ports:
     - name: http
       port: 80
