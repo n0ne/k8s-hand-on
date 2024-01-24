@@ -6,3 +6,7 @@
 - `kubectl describe pod webapp` -
 - `kubectl exec webapp ls` -
 - `kubectl -it exec webapp sh` -
+- `kubectl describe service fleetman-webapp` - 
+- `kubectl get pods` -
+- `kubectl get pods --show-labels` -
+- `kubectl get pods --show-labels -l release=0` - 
