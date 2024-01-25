@@ -15,3 +15,7 @@
 - `kubectl delete po --all` -
 - `kubectl describe replicaset webapp` -
 - `kubectl describe rs webapp` -
+- `kubectl rollout status deployment webapp` - 
+- `kubectl rollout history deployment webapp` - 
+- `kubectl rollout undo deployment webapp` - 
+- 
