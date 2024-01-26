@@ -1,26 +1,26 @@
-apiVersion: v1
-kind: Service
-metadata:
-  name: fleetman-webapp
+# apiVersion: v1
+# kind: Service
+# metadata:
+#   name: fleetman-webapp
 
-spec:
-  # This defines which pods are going to be represented by this service
-  # The service becomes a network endpoint for either other services
-  # or maybe external users to connect to (eg browser)
-  selector:
-    app: webapp
-    # mylabelname: webapp
-    # release: "0-5"
-  ports:
-    - name: http
-      port: 80
-      nodePort: 30080  # <- this is the port that will be exposed
-                       # k8s allaw expose the port number for nodePort greater then 300000
+# spec:
+#   # This defines which pods are going to be represented by this service
+#   # The service becomes a network endpoint for either other services
+#   # or maybe external users to connect to (eg browser)
+#   selector:
+#     app: webapp
+#     # mylabelname: webapp
+#     # release: "0-5"
+#   ports:
+#     - name: http
+#       port: 80
+#       nodePort: 30080  # <- this is the port that will be exposed
+#                        # k8s allaw expose the port number for nodePort greater then 300000
 
-      # targetPort: 80
-  # type: ClusterIP   # <- this pod will be accessible only inside cluster
-                    # and not from outside. Protected in some way
-  type: NodePort    # <- this pod will be accessible only from outside cluster
+#       # targetPort: 80
+#   # type: ClusterIP   # <- this pod will be accessible only inside cluster
+#                     # and not from outside. Protected in some way
+#   type: NodePort    # <- this pod will be accessible only from outside cluster
 
 ---
 
@@ -35,5 +35,9 @@ spec:
   ports:
     - name: http
       port: 8161
-      nodePort: 30010 
+      nodePort: 30010
+
+    - name: endpoint
+      port: 61616
+      
   type: NodePort
