@@ -18,4 +18,6 @@
 - `kubectl rollout status deployment webapp` - 
 - `kubectl rollout history deployment webapp` - 
 - `kubectl rollout undo deployment webapp` - 
+- `kubectl get namespaces` - 
+- `kubectl get all -n kube-system` - 
 - 
