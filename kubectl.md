@@ -20,4 +20,5 @@
 - `kubectl rollout undo deployment webapp` - 
 - `kubectl get namespaces` - 
 - `kubectl get all -n kube-system` - 
+- `kubectl logs position-simulator-68d7486c5c-5c8lz` -
 - 
