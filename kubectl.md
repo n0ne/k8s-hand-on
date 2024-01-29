@@ -1,24 +1,24 @@
 ### kubectl commands
 
-- `kubectl get all` -
-- `kubectl apply -f first-pod.yaml` -
-- `kubectl get all` -
-- `kubectl describe pod webapp` -
-- `kubectl exec webapp ls` -
-- `kubectl -it exec webapp sh` -
-- `kubectl describe service fleetman-webapp` - 
-- `kubectl get pods` -
-- `kubectl get pods --show-labels` -
-- `kubectl get pods --show-labels -l release=0` - 
-- `kubectl port-forward svc/fleetman-queue 30010:8161` - 
-- `kubectl delete po webapp-release-0-5` -
-- `kubectl delete po --all` -
-- `kubectl describe replicaset webapp` -
-- `kubectl describe rs webapp` -
-- `kubectl rollout status deployment webapp` - 
-- `kubectl rollout history deployment webapp` - 
-- `kubectl rollout undo deployment webapp` - 
-- `kubectl get namespaces` - 
-- `kubectl get all -n kube-system` - 
-- `kubectl logs position-simulator-68d7486c5c-5c8lz` -
+- `kubectl get all` - Display information about all resources in the default namespace
+- `kubectl apply -f first-pod.yaml` - Create or update resources defined in the 'first-pod.yaml' file
+- `kubectl get all` - Display information about all resources in the default namespace after applying changes
+- `kubectl describe pod webapp` - Display detailed information about the 'webapp' pod
+- `kubectl exec webapp ls` - Execute 'ls' command inside the 'webapp' pod
+- `kubectl -it exec webapp sh` - Start an interactive shell inside the 'webapp' pod
+- `kubectl describe service fleetman-webapp` - Display detailed information about the 'fleetman-webapp' service
+- `kubectl get pods` - List all pods in the default namespace
+- `kubectl get pods --show-labels` - List pods in the default namespace along with their labels
+- `kubectl get pods --show-labels -l release=0` -  List pods in the default namespace with the label 'release=0'
+- `kubectl port-forward svc/fleetman-queue 30010:8161` - Forward local port 30010 to port 8161 of the 'fleetman-queue' service
+- `kubectl delete po webapp-release-0-5` - Delete the 'webapp-release-0-5' pod
+- `kubectl delete po --all` - Delete all pods in the default namespace
+- `kubectl describe replicaset webapp` - Display detailed information about the 'webapp' ReplicaSet
+- `kubectl describe rs webapp` - Display detailed information about the 'webapp' ReplicaSet
+- `kubectl rollout status deployment webapp` - Display the rollout status of the 'webapp' deployment
+- `kubectl rollout history deployment webapp` - Display the rollout history of the 'webapp' deployment
+- `kubectl rollout undo deployment webapp` - Rollback the 'webapp' deployment to a previous revision
+- `kubectl get namespaces` - List all namespaces
+- `kubectl get all -n kube-system` - List all resources in the 'kube-system' namespace
+- `kubectl logs position-simulator-68d7486c5c-5c8lz` - Display logs of the 'position-simulator-68d7486c5c-5c8lz' pod
 - 
