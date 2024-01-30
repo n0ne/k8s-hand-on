@@ -18,6 +18,11 @@ spec:
         volumeMounts:
         - name: mongo-persistent-storage
           mountPath: /data/db
+      volumes:
+      - name: mongo-persistent-storage
+        hostPath:
+          path: /mnt/some/directory/structure/
+          type: DirectoryOrCreate
 
 ---
 apiVersion: v1
