@@ -15,6 +15,9 @@ spec:
       containers:
       - name: mongodb
         image: arm64v8/mongo:4.0
+        volumeMounts:
+        - name: mongo-persistent-storage
+          mountPath: /data/db
 
 ---
 apiVersion: v1
@@ -29,3 +32,5 @@ spec:
     - name: mongoport
       port: 27017
   type: ClusterIP
+
+---
