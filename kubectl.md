@@ -21,4 +21,6 @@
 - `kubectl get namespaces` - List all namespaces
 - `kubectl get all -n kube-system` - List all resources in the 'kube-system' namespace
 - `kubectl logs position-simulator-68d7486c5c-5c8lz` - Display logs of the 'position-simulator-68d7486c5c-5c8lz' pod
+- `kubectl get pv` - List all persistent volumes
+- `kubectl get pvc` - List all persistent volumes claims
 - 
